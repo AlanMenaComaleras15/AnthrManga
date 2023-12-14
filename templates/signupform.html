@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../static/signupstyle.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<link rel="stylesheet" href="../static/header.css">
+	<link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+	<title>{% block title %} Signup {% endblock %}</title>
+
+	<div class="logingridcontainer">
+		<div class="logintitle">
+			<h1 class="logintitletext" id="logintext">
+				<b>
+					<div id="line1">
+						Welcome
+					</div>
+					<div id="line2">
+						imaginative
+					</div>
+					<div id="line3">
+						readers.
+					</div>
+				</b>
+			</h1>
+		</div>
+		<div class="loginform">
+			<form action="/sessions/signup" method="POST">
+				<p class="formtext">
+					Mail:
+				</p>
+				<input type="email" name="mail" id="mail" required placeholder="example@example.com" class="formtextinput">
+			<p class="formtext">
+				Password:
+			</p>
+			<input type="password" name="password" id="password" required placeholder="Password" class="formtextinput">
+
+			<p>
+				By logging in you accept the terms of use.
+			</p>
+			<div>
+				<button id="submit-button" type="submit">Sign Up</button>
+			</div>
+			</form>
+	</div>
+</div>
+</body>
+
+<footer>
+	<p style="text-align: center;">
+		Wow such footer!
+	</p>
+</footer>
+{% endblock %}

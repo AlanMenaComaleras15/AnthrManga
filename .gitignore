@@ -1,0 +1,14 @@
+.env
+tests/.env
+poetry.*
+pyproject.*
+pyrebasef.*
+.vscode/*
+todo.md
+__pycahe__/*
+blueprints/__pycache__/*
+blueprints/__pycache__/*
+blueprints/__pycache__/*
+__pycache__/supabasef.cpython-310.pyc
+TEST/*
+.vercel

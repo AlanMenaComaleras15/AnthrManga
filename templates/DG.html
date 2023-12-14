@@ -1,0 +1,80 @@
+<!-- BOOK 1 -->
+{% if discoverCount >=1 %}
+<img class="rowelement bookcover1" alt="Bookcover of the book {{ discover[0]['name'] }}" src="https://aluyrcjqzpacibftkfwr.supabase.co/storage/v1/object/public/covers/{{ discover[0]['cover'] }}"/>
+<p class="booktitle1 rowelement">
+    <a href="/feed/details/{{ discover[0]['id'] }}">
+    <b>
+        {{ discover[0]['name'] }}
+    </b>
+    </a>
+</p>
+<p class="rowelement author1">
+    <a href="/feed/details/{{ discover[0]['id'] }}">
+    {{ discover[0]['author'] }}
+    </a>
+</p>
+<p class="rowelement chapter1">
+</p>
+{% endif %}
+
+<!-- BOOK 2 -->
+{% if discoverCount >= 2 %}
+<img class="rowelement bookcover2" alt="Bookcover of the book {{ discover[0]['name'] }}" src="https://aluyrcjqzpacibftkfwr.supabase.co/storage/v1/object/public/covers/{{ discover[1]['cover'] }}"/>
+<p class="booktitle2 rowelement">
+    <a href="/feed/details/{{ discover[1]['id'] }}">
+    <b>
+        {{ discover[1]['name'] }}
+    </b>
+    </a>
+</p>
+<p class="rowelement author2">
+    <a href="/feed/details/{{ discover[1]['id'] }}">
+    {{ discover[1]['author'] }}
+    </a>
+</p>
+<p class="rowelement chapter2">
+</p>
+{% endif %}
+
+<!-- BOOK 3 -->
+{% if discoverCount >= 3 %}
+<img class="rowelement bookcover3" alt="Bookcover of the book {{ discover[0]['name'] }}" src="https://aluyrcjqzpacibftkfwr.supabase.co/storage/v1/object/public/covers/{{ discover[2]['cover'] }}"/>
+<p class="booktitle3 rowelement">
+    <a href="/feed/details/{{ discover[2]['id'] }}">
+    <b>
+        {{ discover[2]['name'] }}
+    </b>
+    </a>
+</p>
+<p class="rowelement author3">
+    <a href="/feed/details/{{ discover[2]['id'] }}">
+    {{ discover[2]['author'] }}
+    </a>
+</p>
+<p class="rowelement chapter3">
+</p>
+{% endif %}
+
+
+<!-- BOOK 4 -->
+{% if discoverCount >= 4 %}
+<img class="rowelement bookcover4" alt="Bookcover of the book {{ discover[0]['name'] }}" src="https://aluyrcjqzpacibftkfwr.supabase.co/storage/v1/object/public/covers/{{ discover[3]['cover'] }}"/>
+<p class="booktitle4 rowelement">
+    <a href="/feed/details/{{ discover[3]['id'] }}">
+    <b>
+        {{ discover[3]['name'] }}
+    </b>
+    </a>
+</p>
+<p class="rowelement author4">
+    <a href="/feed/details/{{ discover[3]['id'] }}">
+    {{ discover[3]['author'] }}
+    </a>
+</p>
+<p class="rowelement chapter4">
+</p>
+{% endif %}
+
+
+<hr class="rowelement rowline" id="continue-reading-bottom-line">
+</div>

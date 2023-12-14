@@ -1,0 +1,232 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %} Feed {% endblock %}</title>
+	<link rel="stylesheet" href="../static/feedstyle.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<script defer src="/static/feedscript.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+	<script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+
+	<main id="swup" class="transition-fade">
+
+	<div class="centertitle">
+		<h1 id="maintitle">
+			Welcome back, {{username}}.
+		</h1>
+	</div>
+	{% for puzzle in structure %}
+		{% include structure[loop.cycle(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)] %}
+	{% endfor %}
+
+	<!-- <div class="row" id="continue-reading-row">
+		<h2 class="rowelement rowtitle" id="continue-reading-title">
+			Continue reading
+		</h2>
+
+		<div class="spacer"></div>
+		<hr class="rowelement rowline" id="continue-reading-line">
+BOOK 1
+		<div class="rowelement bookcover1"></div>
+		<p class="booktitle1 rowelement">
+			<b>
+				Book Title
+			</b>
+		</p>
+		<p class="rowelement author1">
+			Some author
+		</p>
+		<p class="rowelement chapter1">
+			43 / 125
+		</p>
+
+BOOK 2 
+		<div class="rowelement bookcover2"></div>
+		<p class="booktitle2 rowelement">
+			<b>
+				Book Title
+			</b>
+		</p>
+		<p class="rowelement author2">
+			Some author
+		</p>
+		<p class="rowelement chapter2">
+			53 / 125
+		</p>
+
+
+BOOK 3 --
+		<div class="rowelement bookcover3"></div>
+		<p class="booktitle3 rowelement">
+			<b>
+				Book title
+			</b>
+		</p>
+		<p class="rowelement author3">
+			Some author
+		</p>
+		<p class="rowelement chapter3">
+			23 / 125
+		</p>
+
+BOOK 4 --
+		<div class="rowelement bookcover4"></div>
+		<p class="booktitle4 rowelement">
+			<b>
+				Book Title
+			</b>
+		</p>
+		<p class="rowelement author4">
+			Some author
+		</p>
+		<p class="rowelement chapter4">
+			52 / 125
+		</p>
+		
+
+		<hr class="rowelement rowline" id="continue-reading-bottom-line">
+	</div>
+
+
+
+
+	<div class="row" id="continue-reading-row">
+		<h2 class="rowelement rowtitle" id="continue-reading-title">
+			Trending releases
+		</h2>
+
+		<div class="spacer"></div>
+		<hr class="rowelement rowline" id="continue-reading-line">
+
+	OOK 1 --
+		<div class="rowelement bookcover1"></div>
+		<p class="booktitle1 rowelement">
+			<b>
+				Book Title
+			</b>
+		</p>
+		<p class="rowelement author1">
+			Some author
+		</p>
+		<p class="rowelement chapter1">
+			43 / 125
+		</p>
+BOOK 2 --
+		<div class="rowelement bookcover2"></div>
+		<p class="booktitle2 rowelement">
+			<b>
+				Book Title
+			</b>
+		</p>
+		<p class="rowelement author2">
+			Some author
+		</p>
+		<p class="rowelement chapter2">
+			53 / 125
+		</p>
+
+BOOK 3 --
+		<div class="rowelement bookcover3"></div>
+		<p class="booktitle3 rowelement">
+			<b>
+				Book title
+			</b>
+		</p>
+		<p class="rowelement author3">
+			Some author
+		</p>
+		<p class="rowelement chapter3">
+			23 / 125
+		</p>
+
+
+	BOOK 4 --
+		<div class="rowelement bookcover4"></div>
+		<p class="booktitle4 rowelement">
+			<b>
+				Book Title
+			</b>
+		</p>
+		<p class="rowelement author4">
+			Some author
+		</p>
+		<p class="rowelement chapter4">
+			52 / 125
+		</p>
+		
+	</div>
+
+
+
+	<div class="row" id="continue-reading-row">
+
+		<div class="spacer"></div>
+	BOOK 1 --
+		<div class="rowelement bookcover1"></div>
+		<p class="booktitle1 rowelement">
+			<b>
+				Book Title
+			</b>
+		</p>
+		<p class="rowelement author1">
+			Some author
+		</p>
+		<p class="rowelement chapter1">
+			43 / 125
+		</p>
+BOOK 2 --
+		<div class="rowelement bookcover2"></div>
+		<p class="booktitle2 rowelement">
+			<b>
+				Book Title
+			</b>
+		</p>
+		<p class="rowelement author2">
+			Some author
+		</p>
+		<p class="rowelement chapter2">
+			53 / 125
+		</p>
+
+
+		OOK 3 --
+		<div class="rowelement bookcover3"></div>
+		<p class="booktitle3 rowelement">
+			<b>
+				Book title
+			</b>
+		</p>
+		<p class="rowelement author3">
+			Some author
+		</p>
+		<p class="rowelement chapter3">
+			23 / 125
+		</p>
+
+
+		BOOK 4 --
+		<div class="rowelement bookcover4"></div>
+		<p class="booktitle4 rowelement">
+			<b>
+				Book Title
+			</b>
+		</p>
+		<p class="rowelement author4">
+			Some author
+		</p>
+		<p class="rowelement chapter4">
+			52 / 125
+		</p>
+		
+
+		<hr class="rowelement rowline" id="continue-reading-bottom-line">
+	</div> -->
+
+	</main>
+	
+<script defer src="/static/feedscript.js"></script>
+
+{% endblock %}

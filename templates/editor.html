@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/static/editor.css">
+	<link rel="stylesheet" href="/static/header.css">
+	<link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<title>{% block title %} Edit {{book['name']}} {% endblock %}</title>
+
+    <h1 id="maintitle">
+        You are editing {{book['name']}}
+    </h1>
+
+	{% if book['chapters'] == [] %}
+    <div class="nochapters">
+        <h2 class="nochapterstext">
+            It seems that your book doesn't have any chapters...
+        </h2>
+        <h3 class="nochapterstext">
+            Do you want to add some?
+        </h3>
+
+        <a href="/manga/addchapter/{{book['id']}}">
+        <div id="addbutton">
+                <p id="addtext">
+                    Add chapters
+                </p>
+            </div>
+        </a>
+    </div>
+
+    {% else %}
+    <script defer src="/static/detailsscript.js"></script>
+
+    <a href="/manga/addchapter/{{book['id']}}">
+        <div id="addbutton">
+            <p id="addtext">
+                Add chapters
+            </p>
+        </div>
+    </a>
+    {% for chapter in chapters %}
+        <div class="chapter-wrapper">
+            <span class="material-symbols-outlined chapter-icon">
+                menu_book
+            </span>
+            <h3 class="chapter-title">{{chapter['name']}}</h3>
+            <p class="description-button" onclick="toggleDesc('{{loop.index0}}')">
+                Show description
+            </p>
+    
+            <p class="chapter-description-text" id="{{loop.index0}}">
+                {{chapter['description']}}
+            </p>
+        </div>
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}

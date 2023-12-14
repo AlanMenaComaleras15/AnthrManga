@@ -1,0 +1,92 @@
+<!-- BOOK 1 -->
+{% if readingCount >= 1 %}
+    <img class="rowelement bookcover1" alt="Bookcover of the book {{ reading[0]['name'] }}" src="https://aluyrcjqzpacibftkfwr.supabase.co/storage/v1/object/public/covers/{{ reading[0]['cover'] }}"/>
+<p class="booktitle1 rowelement">
+    <a href="/feed/details/{{ reading[0]['bookID'] }}">
+    <b>
+      {{ reading[0]['name'] }}
+    </b>
+    </a>
+</p>
+<p class="rowelement author1">
+    <a href="/feed/details/{{ reading[0]['bookID'] }}">
+  {{ reading[0]['author'] }}
+    </a>
+</p>
+<p class="rowelement chapter1">
+    <a href="/feed/details/{{ reading[0]['bookID'] }}">
+  {{ reading[0]['order'] }}
+    </a>
+</p>
+{% endif %}
+
+<!-- BOOK 2 -->
+{% if readingCount >= 2 %}
+    <img class="rowelement bookcover2" alt="Bookcover of the book {{ reading[1]['name'] }}" src="https://aluyrcjqzpacibftkfwr.supabase.co/storage/v1/object/public/covers/{{ reading[1]['cover'] }}"/>
+<p class="booktitle2 rowelement">
+    <a href="/feed/details/{{ reading[1]['bookID'] }}">
+    <b>
+      {{ reading[1]['name'] }}
+    </b>
+    </a>
+</p>
+<p class="rowelement author2">
+    <a href="/feed/details/{{ reading[1]['bookID'] }}">
+  {{ reading[1]['author'] }}
+    </a>
+</p>
+<p class="rowelement chapter2">
+    <a href="/feed/details/{{ reading[1]['bookID'] }}">
+  {{ reading[1]['order'] }}
+    </a>
+</p>
+{% endif %}
+
+
+<!-- BOOK 3 -->
+{% if readingCount >= 3 %}
+    <img class="rowelement bookcover3" alt="Bookcover of the book {{ reading[2]['name'] }}" src="https://aluyrcjqzpacibftkfwr.supabase.co/storage/v1/object/public/covers/{{ reading[2]['cover'] }}"/>
+<p class="booktitle3 rowelement">
+    <a href="/feed/details/{{ reading[2]['bookID'] }}">
+    <b>
+      {{ reading[2]['name'] }}
+    </b>
+    </a>
+</p>
+<p class="rowelement author3">
+    <a href="/feed/details/{{ reading[2]['bookID'] }}">
+  {{ reading[2]['author'] }}
+    </a>
+</p>
+<p class="rowelement chapter3">
+    <a href="/feed/details/{{ reading[2]['bookID'] }}">
+  {{ reading[2]['order'] }}
+    </a>
+</p>
+{% endif %}
+
+
+<!-- BOOK 4 -->
+{% if readingCount >= 4 %}
+    <img class="rowelement bookcover4" alt="Bookcover of the book {{ reading[3]['name'] }}" src="https://aluyrcjqzpacibftkfwr.supabase.co/storage/v1/object/public/covers/{{ reading[3]['cover'] }}"/>
+<p class="booktitle4 rowelement">
+    <a href="/feed/details/{{ reading[3]['bookID'] }}">
+    <b>
+      {{ reading[3]['name'] }}
+    </b>
+    </a>
+</p>
+<p class="rowelement author4">
+    <a href="/feed/details/{{ reading[3]['bookID'] }}">
+  {{ reading[3]['author'] }}
+    </a>
+</p>
+<p class="rowelement chapter4">
+    <a href="/feed/details/{{ reading[3]['bookID'] }}">
+  {{ reading[3]['order'] }}
+    </a>
+</p>
+{% endif %}
+
+<hr class="rowelement rowline" id="continue-reading-bottom-line">
+</div>

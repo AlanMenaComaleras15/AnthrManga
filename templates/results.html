@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/static/results.css">
+	<link rel="stylesheet" href="/static/header.css">
+	<link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<title>{% block title %} Results{% endblock %}</title>
+
+	{% if resultsLen == 0 %}
+
+	<div id="space"></div>
+
+	<h1 class="centered">Is seems that there aren't any interesting results. :,(</h1>
+
+	{% else %}
+
+
+	<h1>
+		Results
+	</h1>
+	<div id="results">
+
+	{% for result in results %}
+	<div class="book">
+<img class="bookcover1" alt="Bookcover of the book {{ result['name'] }}" src="https://aluyrcjqzpacibftkfwr.supabase.co/storage/v1/object/public/covers/{{ result['cover'] }}"/>
+
+<div class="text-wrapper">
+<p class="booktitle1">
+    <a href="/feed/details/{{ result['id'] }}">
+    <b>
+        {{ result['name'] }}
+    </b>
+    </a>
+</p>
+<p class="author1">
+    <a href="/feed/details/{{ result['id'] }}">
+    {{ result['author'] }}
+    </a>
+</p>
+<p class="chapter1">
+</p>
+</div>
+</div>
+	{% endfor %}
+
+</div>
+
+	{% endif %}
+
+{% endblock %}

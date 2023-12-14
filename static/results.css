@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+h1{
+	font-family: Lato;
+}
+
+#space{
+	height: 30vh;
+}
+
+.centered{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.booktitle1{
+	opacity: 0%;
+
+	font-family: Lato;
+	font-size: 1.8vw;
+
+	height: fit-content;
+
+	margin: 0px 0px 0px 0px;
+
+	animation-name: appear;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: 2s;
+}
+
+.author1{
+	opacity: 0%;
+
+	height: min-content;
+
+	font-family: Lato;
+	font-size: 1.5vw;
+
+	margin: 0px 0px 0px 0px;
+
+	animation-name: appear;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: 2s;
+}
+
+.chapter1{
+	height: min-content;
+
+	opacity: 0%;
+
+	font-family: Lato;
+	font-size: 0.7vw;
+
+	margin: 0px 0px 0px 0px;
+
+	animation-name: appear;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: 2s;
+}
+
+.bookcover1{
+	margin-top: 2.5vh;
+
+	margin-right: 2.5vw;
+
+	opacity: 0%;
+
+	margin-left: 2.5vw;
+
+	height: 13vw;
+	width: 9vw;
+
+	background-color: gray;
+
+	border-radius: 1vw;
+
+	animation-name: appear;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: 2s;
+}
+
+.book{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+
+	margin: 2vh;
+}
+
+#results{
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+	flex-wrap: wrap;
+}
+
+@keyframes appear{
+	0%{
+		opacity: 0%;
+		transform: translateY(1vw);
+	}
+	40%{
+		opacity: 100%;
+		transform: translateY(0vw);
+	}
+	60%{
+		transform: translateY(0vw);
+	}
+	100%{
+		opacity: 100%;
+	}
+}

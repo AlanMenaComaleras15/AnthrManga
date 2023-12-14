@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/header.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %} ~/ Manga</title>
+</head>
+<body>
+	<a rel="me" href="https://mastodont.cat/@alanmena"></a>
+
+    <header>
+        <a href="/feed">
+            <img href="/feed" src="/static/images/ANTHR.png" alt="Anthr manga logo" id="headerlogo">
+        </a>
+    
+        <div id="spacer"></div>
+
+        <a href="/feed/library">
+            <p class="headerbutton" id="library">
+                Library
+            </p>
+        </a>
+    
+        <p class="headerbutton" id="directory">
+            Directory
+        </p>
+    
+        <a href="/controls/search">
+            <p class="headerbutton" id="search">
+                Search
+            </p>
+        </a>
+
+        <span class="material-symbols-outlined" id="pfp">
+            account_circle
+        </span>
+    </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/kursor"></script>
+	<script>
+        new kursor({
+            type: 2,
+			removeDefaultCursor: true,
+        })
+    </script>
+    
+    {% block content %} {% endblock %}
+
+</body>
+</html>

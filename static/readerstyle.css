@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap'); 
+
+p{
+	font-family: lato;
+}
+
+#whitescreen{
+	background-color: white;
+	z-index: 9;
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	margin: 0px;
+	padding: 0px;
+	top: 0px;
+
+	animation-name: disappear;
+	animation-delay: .5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: 3.8s;
+}
+
+#loadingtext{
+	margin: 0px;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	flex-direction: column;
+	z-index: 10;
+    opacity: 0%;
+
+    animation-name: appear-loading;
+	animation-delay: .5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: 3.4s;
+}
+
+#loadingtitle{
+	margin: 0px;
+
+	font-size: 4vw;
+}
+
+#loadingsubtitle{
+	margin: 0px;
+
+	font-size: 3vw;
+}
+
+
+.titlescontainer{
+	display: flex;
+	flex-direction: column;
+
+	margin: 2vw;
+}
+
+.wrapper{
+	display: flex;
+	flex-direction: row;
+}
+
+.mangatitle{
+	margin: 0px;
+	font-family: Lato;
+}
+
+#by{
+	margin: 0px;
+	font-family: Lato;
+}
+
+#authorname{
+	margin: 0px;
+	font-family: Lato;
+}
+
+#chapters{
+	margin: 0px;
+	font-family: Lato;
+}
+
+#reader{
+	margin-left: 2.3vw;
+}
+
+#navigationcontainer{
+	display: flex;
+	flex-direction: row;
+	margin-left: 2vw;
+}
+
+.arrow{
+	height: 5vh;
+	width: 5vh;
+	border-radius: 10px;
+
+
+	background-color: aqua;
+	margin: 0px 5px 0px 5px;
+}
+
+.symbol{
+	margin: 1vh;
+	font-size: 3vh !important;
+}
+
+@keyframes appear{
+	0%{
+		opacity: 0%;
+		transform: translateY(1vw);
+	}
+	40%{
+		opacity: 100%;
+		transform: translateY(0vw);
+	}
+	60%{
+		transform: translateY(0vw);
+	}
+	100%{
+		opacity: 100%;
+	}
+}
+
+@keyframes appear-loading{
+	0%{ opacity: 0%; transform: translateY(1vw);}
+	20%{opacity: 100%; transform: translateY(0vw);}
+	30%{transform: translateY(0vw);}
+	50%{opacity: 100%;}
+    90%{opacity: 100%; transform: translateY(0vw);}
+	99%{z-index: 10;}
+	100%{opacity: 0%; transform: translateY(-1vw); z-index: -9;}
+}
+
+@keyframes disappear{
+    90%{opacity: 100%;}
+	99%{z-index: 9;}
+	100%{opacity: 0%; z-index: -9;}
+}

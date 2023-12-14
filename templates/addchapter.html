@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/static/addchapter.css">
+	<link rel="stylesheet" href="/static/header.css">
+	<link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<title>{% block title %} Add chapter to {{book['name']}} {% endblock %}</title>
+
+    <h1 id="maintitle">
+        You're adding a chapter to {{book['name']}}
+    </h1>
+
+    <div id="form-wrapper">
+        <form action="/manga/chapteradd/{{book['id']}}" method="post" enctype="multipart/form-data">
+            <p class="formtext">Title:</p>
+            <input class="k-hover1" required type="text" placeholder="Title" id="title-input" name="title-input">
+
+            <p class="formtext">Description:</p>
+	        <textarea name="description" id="description" placeholder="Description" required></textarea>
+
+            <p class="formtext">Chapter number:</p>
+            <input class="formtext-right" type="number" id="order" name="order" required/>
+            <p class="formtext">EPUB file:</p>
+            <input class="formtext-right" type="file" id="status" name="epub" accept="application/epub+zip" required/>
+
+            <input id="submit-button" type="submit"/>
+        </form>
+    </div>
+{% endblock %}

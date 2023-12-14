@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap'); 
+
+p {
+	font-family: Lato, sans-serif;
+}
+
+h1 {
+	font-family: Lato, sans-serif;
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+}
+
+#logintext {
+	font-size: 8.3vw;
+	margin-left: 40px;
+}
+
+.logingridcontainer {
+	display: grid;
+	height: 100%;
+	width: 100%;
+}
+
+.blur {
+	background: rgb(57,38,91);
+	background: linear-gradient(148deg, rgba(57,38,91,1) 0%, rgba(210,100,237,1) 50%, rgba(248,40,220,1) 100%);
+	filter: blur(20px);
+	height: 100%;
+	width: 100%;
+}
+
+.logintitle {
+	grid-column: 1;
+}
+
+.loginform {
+	grid-column: 2;
+	display: flex;
+  align-items: center;
+  justify-content: flex-start;	
+}
+
+.formtext {
+	margin-bottom: 3px;
+	font-size: 1vw;
+	font-family: Lato, sans-serif;
+}
+
+.formtextinput {
+	width: 13vw;
+	height: 3vh;
+	border-radius: 7px;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	border: 0px;
+}
+
+#submit-button{
+	background-color: white;
+	border-radius: 7px;
+	border-width: 0px;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	margin-top: 3vh;
+	height: 3vh;
+	width: auto;
+	font-size: 1vw;
+
+	transition: 0.3s;
+}
+
+#submit-button:hover{
+	box-shadow: 0 5px 10px rgb(0 0 0 / 0.4);
+}
+
+/* --ANIMATION OF THE THREE INITIAL LINES-- */
+#line1 {
+	animation-name: initiallines;
+	animation-duration: 0.5s;
+	opacity: 0%;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-delay: 0.1s;
+}	
+
+#line2 {
+	animation-name: initiallines;
+	animation-duration: 0.5s;
+	opacity: 0%;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-delay: 0.5s;
+}
+
+#line3 {
+	animation-name: initiallines;
+	animation-duration: 0.5s;
+	opacity: 0%;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-delay: 0.9s;
+}
+
+
+@keyframes initiallines {
+	0%{
+		transform: translate(0vw, 0.4vw);
+	}
+
+	100%{
+		transform: translate(0vw, 0vw);
+		opacity: 100%;
+	}
+}

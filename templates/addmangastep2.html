@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../static/addmangastep2.css">
+	<link rel="stylesheet" href="../static/header.css">
+	<link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<title>{% block title %} Add manga {% endblock %}</title>
+
+	<div id="main-wrapper">
+		<img id="bookcover" alt="Bookcover image chosen by publisher" src="/bibi-bookshelf/covers/{{image}}.jpg">
+
+		<div id="form-wrapper">
+			<form action="/manga/addmangastep2" method="post" enctype="multipart/form-data">
+				<h1 id="almost-done">
+					Hoorray, almost done!
+				</h1>
+
+				<p id="disclamer-text">
+					Now, let's add a price to the book, the price that you are entering WILL BE THE FINAL PRICE, so a 4% cut will be for taxes, and another 16% will be our cut on the book.
+					<br>
+					Also, this price is the price of the book with all of the chapters, each chapter will be sold individually, and this price will GIVE ACCESS TO THE TOTALITY OF THE BOOK.
+				</p>
+				<div class="input-wrapper">
+					<div>
+						<p class="formtext">Price:</p>
+						<input class="k-hover1" required type="number" step=".01" placeholder="Price" id="price-input" name="price-input">
+					</div>
+				</div>
+
+				<p id="disclamer-text">
+					By sending the price, you accept all the conditions and the disclaimer above.
+				</p>
+
+				<input id="submit-button" type="submit">
+			</form>
+		</div>
+
+	</div>
+{% endblock %}

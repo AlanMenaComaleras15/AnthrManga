@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap'); 
+@import url(/static/loader.css);
+
+p {
+	font-family: Lato, sans-serif;
+}
+
+h1 {
+	font-family: Lato, sans-serif;
+}
+
+h2 {
+	font-family: Lato, sans-serif;
+}
+
+#main-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+#bookcover{
+	align-self: center;
+
+	margin-top: 2.5vh;
+
+	margin-right: 2.5vw;
+
+	opacity: 0%;
+
+	margin-left: 2.5vw;
+
+	height: 38vw;
+	width: 26.331vw;
+
+	background-color: gray;
+
+	border-radius: 1vw;
+
+	animation-name: appear;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: 2s;
+}
+
+.formtext-right {
+	opacity: 0;
+
+	margin-bottom: 3px;
+	font-size: 1vw;
+	font-family: Lato, sans-serif;
+	margin-top: 5vh;
+	margin-left: 1vw;
+
+	animation-name: appear;
+	animation-delay: 0.6s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: 2s;
+}
+
+.formtext {
+	opacity: 0;
+
+	margin-bottom: 3px;
+	font-size: 1vw;
+	font-family: Lato, sans-serif;
+	margin-top: 5vh;
+
+	animation-name: appear;
+	animation-delay: 0.6s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: 2s;
+}
+
+.input-wrapper{
+	display: flex;
+
+	flex-direction: row;
+}
+
+#title-input{
+	opacity: 0;
+	width: 25vw;
+	height: 3vw;
+	background-color:  e8e6e1;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	border: 0mm;
+	margin-top: 1vh;
+
+	font-family: Lato;
+	font-size: 1.8vw;
+
+	font-family: Lato;
+
+	margin-bottom: 0.2vw;
+
+	animation-name: appear;
+	animation-delay: 0.6s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: 2s;
+
+	border-radius: 7px;
+}
+
+#author-input{
+	opacity: 0;
+	width: 20vw;
+	height: 3vw;
+	background-color:  e8e6e1;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	border: 0mm;
+	margin-top: 1vh;
+
+	font-family: Lato;
+	font-size: 1.5vw;
+
+	font-family: Lato;
+
+	margin-bottom: 0.2vw;
+	margin-left: 1vw;
+
+	animation-name: appear;
+	animation-delay: 0.6s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: 2s;
+
+	border-radius: 7px;
+}
+
+#description{
+	opacity: 0;
+	width: 46vw;
+	height: 8vw;
+	background-color:  e8e6e1;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	border: 0mm;
+	margin-top: 1vh;
+
+	font-family: Lato;
+	font-size: 1.3vw;
+
+	font-family: Lato;
+
+	margin-bottom: 0.2vw;
+
+	animation-name: appear;
+	animation-delay: 0.6s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: 2s;
+
+	border-radius: 7px;
+}
+
+#language{
+	opacity: 0;
+	animation-name: appear;
+	animation-delay: 0.6s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: 2s;
+
+	background-color:  white;
+	border: 0mm;
+	margin-top: 1vh;
+	border-radius: 7px;
+
+	font-family: Lato;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	font-size: 1.3vw;
+
+	font-family: Lato;
+}
+
+#status{
+	opacity: 0;
+	animation-name: appear;
+	animation-delay: 0.6s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: 2s;
+
+	background-color:  white;
+	border: 0mm;
+	margin-top: 1vh;
+	border-radius: 7px;
+
+	font-family: Lato;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	font-size: 1.3vw;
+
+	font-family: Lato;
+}
+
+#submit-button{
+	background-color: white;
+	border-radius: 7px;
+	border-width: 0px;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	margin-top: 5vh;
+	height: 4vh;
+	width: auto;
+	font-size: 1.3vw;
+
+	transition: 0.3s;
+
+	opacity: 0;
+	animation-name: appear;
+	animation-delay: 0.6s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: 2s;
+}
+
+#submit-button:hover{
+	box-shadow: 0 5px 10px rgb(0 0 0 / 0.4);
+}
+
+@keyframes appear{
+	0%{
+		opacity: 0%;
+		transform: translateY(1vw);
+	}
+	40%{
+		opacity: 100%;
+		transform: translateY(0vw);
+	}
+	60%{
+		transform: translateY(0vw);
+	}
+	100%{
+		opacity: 100%;
+	}
+}
